@@ -63,10 +63,16 @@ def build():
         "disrupted": ((raw["ArrDel15"] == 1) | (raw["Cancelled"] == 1) | (raw["Diverted"] == 1)).astype(int),
     }).sort_values(["date", "dep_hour", "carrier", "origin", "dest"], kind="stable")
     assert len(out) == 635_459, f"{len(out):,} rows; the Florida Flight Delays project has 635,459"
+    # Leak found in step 4: every flight with no aircraft recorded was cancelled, so "no aircraft" gives the answer
+    # away. The night-before schedule would have named one, so these rows go rather than teach the model a shortcut.
+    no_plane = out["leg"].isna()
+    assert out.loc[no_plane, "disrupted"].all()
+    out = out[~no_plane]
+    print(f"dropped {no_plane.sum():,} cancelled flights with no aircraft recorded")
     (HERE / "data").mkdir(exist_ok=True)
     out.to_csv(HERE / "data" / "flights.csv.gz", index=False)
     print(f"{len(out):,} Florida departures, {out['disrupted'].mean():.1%} disrupted; "
-          f"leg known for {out['leg'].notna().mean():.1%}, turn time for {out['turn_min'].notna().mean():.1%}")
+          f"turn time known for {out['turn_min'].notna().mean():.1%}")
 
 
 if __name__ == "__main__":

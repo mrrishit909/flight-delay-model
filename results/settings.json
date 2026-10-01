@@ -18,22 +18,22 @@
       "learning_rate": 0.1,
       "max_leaf_nodes": 31,
       "max_iter": 300,
-      "valid_log_loss": 0.48940614526369675,
-      "valid_auc": 0.7080141935461096
+      "valid_log_loss": 0.489513684532635,
+      "valid_auc": 0.7075794718233461
     },
     {
       "learning_rate": 0.1,
       "max_leaf_nodes": 63,
       "max_iter": 300,
-      "valid_log_loss": 0.4903109991041963,
-      "valid_auc": 0.7076570705109742
+      "valid_log_loss": 0.49099106382124896,
+      "valid_auc": 0.7062847292306914
     },
     {
       "learning_rate": 0.05,
       "max_leaf_nodes": 63,
       "max_iter": 600,
-      "valid_log_loss": 0.4899919686211289,
-      "valid_auc": 0.7078930175486404
+      "valid_log_loss": 0.4901978834283861,
+      "valid_auc": 0.7077645771329236
     }
   ],
   "gb_chosen": {

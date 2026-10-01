@@ -1,0 +1,90 @@
+{
+  "deciles": [
+    {
+      "group": 1,
+      "actual": 0.0711,
+      "predicted": 0.0562,
+      "flights": 10112
+    },
+    {
+      "group": 2,
+      "actual": 0.1062,
+      "predicted": 0.0907,
+      "flights": 10112
+    },
+    {
+      "group": 3,
+      "actual": 0.1501,
+      "predicted": 0.1224,
+      "flights": 10111
+    },
+    {
+      "group": 4,
+      "actual": 0.1983,
+      "predicted": 0.1567,
+      "flights": 10112
+    },
+    {
+      "group": 5,
+      "actual": 0.2517,
+      "predicted": 0.1944,
+      "flights": 10111
+    },
+    {
+      "group": 6,
+      "actual": 0.3028,
+      "predicted": 0.2367,
+      "flights": 10112
+    },
+    {
+      "group": 7,
+      "actual": 0.361,
+      "predicted": 0.2822,
+      "flights": 10111
+    },
+    {
+      "group": 8,
+      "actual": 0.4308,
+      "predicted": 0.3354,
+      "flights": 10112
+    },
+    {
+      "group": 9,
+      "actual": 0.4903,
+      "predicted": 0.4066,
+      "flights": 10111
+    },
+    {
+      "group": 10,
+      "actual": 0.6431,
+      "predicted": 0.6091,
+      "flights": 10112
+    }
+  ],
+  "by_month": [
+    {
+      "month": "2026-06",
+      "actual": 0.2611,
+      "predicted": 0.2458,
+      "flights": 49353
+    },
+    {
+      "month": "2026-07",
+      "actual": 0.3381,
+      "predicted": 0.2521,
+      "flights": 51763
+    }
+  ],
+  "importance_auc_drop": {
+    "leg": 0.1468,
+    "dep_hour": 0.1198,
+    "turn_min": 0.0703,
+    "sched_min": 0.019,
+    "dest": 0.0161,
+    "dow": 0.0133,
+    "carrier": 0.0123,
+    "distance": 0.0085,
+    "origin": 0.0079,
+    "arr_hour": 0.0057
+  }
+}

@@ -114,6 +114,9 @@ def models(best_gb):
         "Pivot table (airline x hour)": (PivotTable, lambda X: X),
         "Logistic regression": (logistic, with_turn_flags),
         "Gradient boosting": (lambda: gradient_boosting(**best_gb), lambda X: X),
+        # BTS records the aircraft that actually flew; airlines swap some on the day. This one ignores the aircraft
+        # (leg, turn time) to show how much those two features add, in case swaps leak day-of information.
+        "Gradient boosting, no aircraft features": (lambda: gradient_boosting(**best_gb), lambda X: X.drop(columns=["leg", "turn_min"])),
     }
 
 
