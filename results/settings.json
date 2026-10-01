@@ -1,0 +1,44 @@
+{
+  "features": [
+    "carrier",
+    "origin",
+    "dest",
+    "dep_hour",
+    "arr_hour",
+    "dow",
+    "leg",
+    "turn_min",
+    "distance",
+    "sched_min"
+  ],
+  "valid_start": "2026-04-01",
+  "test_start": "2026-06-01",
+  "gb_tried": [
+    {
+      "learning_rate": 0.1,
+      "max_leaf_nodes": 31,
+      "max_iter": 300,
+      "valid_log_loss": 0.48940614526369675,
+      "valid_auc": 0.7080141935461096
+    },
+    {
+      "learning_rate": 0.1,
+      "max_leaf_nodes": 63,
+      "max_iter": 300,
+      "valid_log_loss": 0.4903109991041963,
+      "valid_auc": 0.7076570705109742
+    },
+    {
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 63,
+      "max_iter": 600,
+      "valid_log_loss": 0.4899919686211289,
+      "valid_auc": 0.7078930175486404
+    }
+  ],
+  "gb_chosen": {
+    "learning_rate": 0.1,
+    "max_leaf_nodes": 31,
+    "max_iter": 300
+  }
+}
